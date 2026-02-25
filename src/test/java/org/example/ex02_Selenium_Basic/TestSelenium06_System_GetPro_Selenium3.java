@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ex02_Selenium_Basic;
 
 public class TestSelenium06_System_GetPro_Selenium3
 {

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ex02_Selenium_Basic;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
