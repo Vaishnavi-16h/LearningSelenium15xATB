@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Feb25_Basic
+public class Selenium1_Feb25_CuraLogin
 {
 
     @Test
