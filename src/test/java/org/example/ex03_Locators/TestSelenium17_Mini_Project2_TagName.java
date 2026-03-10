@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 public class TestSelenium17_Mini_Project2_TagName
 {
-
     @Owner("vaish")
     @Severity(SeverityLevel.BLOCKER)
     @TmsLink("https://bugzz.atlassian.net/browse/VWO-19")
@@ -39,9 +38,11 @@ public class TestSelenium17_Mini_Project2_TagName
         checkbox_policy.click();
 
 
+        Thread.sleep(50000);    //more time it will pass this case
+
         //WebElement button_create_account = driver.findElement(By.tagName("button"));
-        //button_create_account.click();
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
+        WebElement button_create_account = driver.findElement(By.cssSelector("button[type='submit']"));
+        button_create_account.click();
 
 
         //<div
@@ -53,7 +54,7 @@ public class TestSelenium17_Mini_Project2_TagName
         // A value for this field is required.</div>
 
 
-        Thread.sleep(20000);
+        Thread.sleep(40000);
 
         WebElement errorMessage = driver.findElement(By.className("invalid-reason"));
         Assert.assertEquals(errorMessage.getText(),"The email address you entered is incorrect.");
