@@ -16,6 +16,9 @@ public class TestSelenium15
         driver.get("https://app.vwo.com");
         driver.manage().window().maximize();
 
+        //allure
+        //allure serve allure-results
+
         //Locators
         // Step 1 - Find the EMAIL ID and enter the admin@admin.com.
         // Step 2 - Find the Password and enter the 1234.
@@ -73,7 +76,7 @@ public class TestSelenium15
         System.out.println(error_message.getText());
 
 
-        //Assertion
+        // Assertion
         // error_message - AR (actual result)
         // "Your email, password, IP address or location did not match" - ER (Expected result)
         Assert.assertEquals(error_message.getText(),"Your email, password, IP address or location did not match");
