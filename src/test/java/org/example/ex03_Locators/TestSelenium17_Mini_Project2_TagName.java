@@ -38,7 +38,7 @@ public class TestSelenium17_Mini_Project2_TagName
         checkbox_policy.click();
 
 
-        Thread.sleep(50000);    //more time it will pass this case
+        Thread.sleep(100000);    //more time it will pass this case
 
         //WebElement button_create_account = driver.findElement(By.tagName("button"));
         WebElement button_create_account = driver.findElement(By.cssSelector("button[type='submit']"));
@@ -54,7 +54,7 @@ public class TestSelenium17_Mini_Project2_TagName
         // A value for this field is required.</div>
 
 
-        Thread.sleep(40000);
+        Thread.sleep(100000);
 
         WebElement errorMessage = driver.findElement(By.className("invalid-reason"));
         Assert.assertEquals(errorMessage.getText(),"The email address you entered is incorrect.");

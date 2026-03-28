@@ -45,6 +45,7 @@ public class TestSelenium_WebTables
                 {
                     String country_path = dynamic_xpath + "/following-sibling::td";
                     String country_path_text = driver.findElement(By.xpath(country_path)).getText();
+
                     String company_path = dynamic_xpath + "/preceding-sibling::td";
                     String company_path_text = driver.findElement(By.xpath(company_path)).getText();
 
