@@ -10,8 +10,7 @@ import org.testng.annotations.Test;
 
 public class TestSeleniumExplicit_MiniProject4 extends CommonToAll
 {
-
-    @Description("Verify makemytrip opens with modal")
+    @Description("Verify  makemytrip opens with modal")
     @Test
     public void testCloseModal()
     {
@@ -23,7 +22,6 @@ public class TestSeleniumExplicit_MiniProject4 extends CommonToAll
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@data-cy='closeModal']")));
 //
-
         waitForVisibility(driver,3,"//span[@data-cy='closeModal']");
 
         WebElement closeModel = driver.findElement(By.xpath("//span[@data-cy='closeModal']"));
@@ -31,6 +29,7 @@ public class TestSeleniumExplicit_MiniProject4 extends CommonToAll
 
         waitForJVM(10000);
         closeBrowser(driver);
+
 
     }
 

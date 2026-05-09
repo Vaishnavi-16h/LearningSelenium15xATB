@@ -4,8 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class Selenium3_March4_AppVWO_Login
 {
@@ -25,9 +29,11 @@ public class Selenium3_March4_AppVWO_Login
         WebElement click_login = driver.findElement(By.xpath("//button[@type='submit']"));          //or    //WebElement click_login = driver.findElement(By.xpath("//button"));
         click_login.click();
 
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement error_msg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("notification-box-description")));
 
-        WebElement error_msg=driver.findElement(By.className("notification-box-description"));
+        //WebElement error_msg=driver.findElement(By.className("notification-box-description"));
         Assert.assertEquals(error_msg.getText(),"Your email, password, IP address or location did not match");
 
         System.out.println(error_msg.getText());
