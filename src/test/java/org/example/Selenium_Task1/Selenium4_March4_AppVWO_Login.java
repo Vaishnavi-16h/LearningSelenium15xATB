@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Selenium3_March4_AppVWO_Login
+public class Selenium4_March4_AppVWO_Login
 {
     @Test
     public void test_vwo_login() throws InterruptedException
