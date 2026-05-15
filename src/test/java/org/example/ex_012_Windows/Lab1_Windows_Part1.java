@@ -17,6 +17,7 @@ public class Lab1_Windows_Part1
 
         String parent_id = driver.getWindowHandle();
         System.out.println(parent_id);
+        System.out.println("--------------------------");
         // 490E6ED1FFCE856958FBB4A646C90572
 
         WebElement link_parent = driver.findElement(By.xpath("//a[text()='Click Here']"));
@@ -24,9 +25,9 @@ public class Lab1_Windows_Part1
 
         Set<String> windows_handles_ids = driver.getWindowHandles();
         // 1D338BD81AC274FF43D0698647443AD0
-        //98C2024C16C8DACAC182BDDC5D7C6ED9
+        // 98C2024C16C8DACAC182BDDC5D7C6ED9
 
-        for(String window:  windows_handles_ids)
+        for(String window : windows_handles_ids)
         {
             System.out.println(window);
             driver.switchTo().window(window);
